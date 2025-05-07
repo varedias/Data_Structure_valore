@@ -1,0 +1,51 @@
+#include “ stdio.h”
+#include “malloc.h”
+struct node
+{
+char data；
+struct node *lchild , *rchild；
+} bnode；
+
+typedef struct node * blink；
+blink add(blink bt,char ch)
+{
+    if(bt==NULL)
+    {
+    bt=malloc(sizeof(bnode))；
+    bt->data = ch；
+    bt->lchild = bt->rchild =NULL；
+    }
+    else if( ch < bt->data)
+    bt->lchild = add(bt->lchid ,ch)；
+    else
+    bt->rchild = add(bt->rchild,ch)；
+    return bt；
+}
+
+void inorder(blink bt)
+{
+if(bt)
+{
+inorder(bt->lchild )；
+printf(“%c”,bt->char )；
+inorder(bt->rchild )；
+}
+}
+void main()
+{
+    blink root = NULL；
+    int i,n；
+    char x；
+    scanf（“%d”,&n)；
+    for(i=0；i<=n；i++)
+    {
+    x=getchar()；
+    root=add(root,x)；
+    }
+    inorder(root)；
+    printf（“\n”）；
+}
+
+
+if the in put is ephqsbma 
+and the result will be : abehmpqs
