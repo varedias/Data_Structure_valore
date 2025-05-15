@@ -72,7 +72,7 @@ void printAdjacencyList(const AdjacencyList& list) {
 
 int main() {
 
-    std::vector<std::vector<int>> adjacent(8, std::vector(8, 0));
+    std::vector<std::vector<int>> adjacent(8, std::vector<int>(8, 0));
     adjacent[0][1] = 1; adjacent[1][0] = 1;
     adjacent[1][4] = 1; adjacent[4][1] = 1;
     adjacent[4][3] = 1; adjacent[3][4] = 1;
