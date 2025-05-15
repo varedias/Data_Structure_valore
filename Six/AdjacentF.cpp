@@ -44,7 +44,7 @@ void printAll(std::vector<std::vector<int>>& Graphic)
 
 int main()
 {
-    std::vector<std::vector<int>> adjacent(7,std::vector(7,0));
+    std::vector<std::vector<int>> adjacent(7,std::vector<int>(7,0));
     adjacent[1][2]=1;
      adjacent[1][3]=1;
     adjacent[1][4]=1;
